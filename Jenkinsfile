@@ -2,6 +2,11 @@ pipeline {
     agent any
     
     stages {
+        stage('clean workspace') {
+            steps {
+                cleanWs()
+            }
+        } 
         stage('Checkout') {
             steps {
                 // Checkout the repository
