@@ -17,6 +17,7 @@ pipeline {
         
         stage('Merge Branches') {
             steps {
+                sh 'git checkout master'
                 // Merge Branch1 into Master
                 sh 'git merge origin/develop'
                 
